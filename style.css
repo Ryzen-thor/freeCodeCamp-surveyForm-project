@@ -1,11 +1,14 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     background: #12c2e9;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); 
+font-size: 25px;
+height: 100vh;
 }
 
 #title,#description{
@@ -23,14 +26,17 @@ background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
 .container{
     
     border: 2px solid   #a218ec ;
+    border-bottom: none;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     
     align-items: center;
-    width: 80%;
+    width: 40%;
     margin: 0 auto;
-    height: 80vh;
+    height: auto;
+    /* overflow: hidden; */
+    
 }
 
 #survey-form{
@@ -39,11 +45,60 @@ background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
 
 .same{
     width: 100%;
-    padding: 0.4rem;
-    margin: 0.5rem 0 0.5rem 0;
+    /* padding: 0.4rem;
+    margin: 0.5rem 0 0.5rem 0; */
     border-radius: 0.2rem;
     background: none;
-    outline: none;
-    border-bottom:2px solid blue ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border:1px solid blue ;
+    transition: all 0.2s ease-out;
+}
+::placeholder{
+    color: white;
+    font-size: 1rem;
 }
 
+::selection{
+    color: yellow;
+}
+
+.same1{
+    padding: 0.6rem;
+    margin: 0.8rem 0 0.8rem 0;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: rgb(30, 30, 231);
+    color: white;
+    font-size: 1.4rem;
+}
+
+#submit{
+    /* margin-top: 20rem; */
+    font-size: 1rem;
+    color: white;
+}
+input:focus{
+    outline: none;
+    border: 1px solid blue;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+textarea:focus{
+    outline: none;
+    border: 1px solid blue;
+    padding: 1rem;
+}
+
+.optColor{
+    color: white;
+    background-color: black;
+}
+
+#dropdown{
+    color: white;
+}
